@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    
+    padding-top: 0;
+}
+
+.logi {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 552px;
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-top: 6%;
+    box-shadow: 0 4px 8px gray;
+    border-radius: 6%;
+}
+
+.background {
+    background: #000;
+}
+
+.len {
+    width: 100%;
+}
+
+h3 {
+    text-shadow: 0px 4px 8px rgb(43, 42, 42);
+}

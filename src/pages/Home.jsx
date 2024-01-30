@@ -11,6 +11,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import background from './img/background.png'
 
 //css
 import './css/Home.css';
@@ -61,7 +62,7 @@ const Home = () => {
                 
             </Container>
             </Navbar>
-
+            <div  >
             <div className='sm'>
                 <h1 className='lop'>Soil Moisture</h1>
                 <div className='sm1'>
@@ -95,7 +96,7 @@ const Home = () => {
                     
                 </div>
             </div>
-
+            </div>
 
 
             

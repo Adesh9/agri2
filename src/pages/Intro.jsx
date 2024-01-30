@@ -1,3 +1,7 @@
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useFirebase } from '../context/Firebase';
+
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
@@ -6,28 +10,34 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Carousel from 'react-bootstrap/Carousel';
 import './css/Intro.css';
-import img from './headphone.jpeg';
-import Farm1 from './Farm1.jpg';
-import Farm2 from './Farm2.jpeg';
-import Farm3 from './Farm4.jpg';
-import Col from 'react-bootstrap/Col';
-import container from 'react-bootstrap/Container';
-import Image from 'react-bootstrap/Image';
-import Row from 'react-bootstrap/Row';
-import image from './Money.png';
-import ProgressBar from 'react-bootstrap/ProgressBar';
-import { BiCommand } from 'react-icons/bi';
-import Nav1 from './Nav1.jpg';
-import Card from 'react-bootstrap/Card';
+//import img from './headphone.jpeg';
+import Farm1 from './img/Farm1.jpg';
+import Farm2 from './img/Farm2.jpg';
+import Farm3 from './img/Farm4.jpg';
+//import { BiCommand } from 'react-icons/bi';
 
 
-
-
-
-function Response() {
-
+function Intro() {
+    
     <srcipt src="https://translate.google.com/"></srcipt>
-
+    const firebase = useFirebase();
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const navigate = useNavigate();
+  
+    useEffect(() => {
+      if (firebase.isLoggedIn){
+        //Navigate to home
+        navigate("/Home");
+      }
+    }, [firebase, navigate])
+  
+    const handleSubmit = async (e) =>{
+      e.preventDefault();
+      console.log('login in up a user...');
+      const result = await firebase.signInWithEmailAndPass(email,password);
+      console.log('Successfull', result);
+    };
 
     return (
         <>
@@ -35,7 +45,7 @@ function Response() {
 
       <Navbar expand="lg" className="bg-body-primary">
         <Container className ="c1" fluid>
-          <Navbar.Brand href="#" style ={{color:"white"}}><  BiCommand/> </Navbar.Brand>
+          <Navbar.Brand href="#" style ={{color:"white"}}> </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
@@ -163,4 +173,4 @@ function Response() {
       </>
     );
   }
-  export default Response;
+  export default Intro;

@@ -1,11 +1,11 @@
 import { Routes, Route } from 'react-router-dom';
-import { useState } from 'react';
-import { useFirebase } from './context/Firebase';
+
 
 //pages
 import NewLogin from './pages/NewLogin';
 import Login from './pages/Login';
 import Home from './pages/Home';
+import Intro from './pages/Intro';
 
 //css
 import './App.css';
@@ -17,8 +17,9 @@ function App() {
 
   return (
    <Routes>
-      <Route path="/" element={<Login/>} />
+      <Route path="/" element={<Intro/>} />
       <Route path="/Home" element={<Home/>} />
+      <Route path="/Login" element={<Login/>} />
       <Route path="/NewLogin" element={<NewLogin/>} />
       
    </Routes>

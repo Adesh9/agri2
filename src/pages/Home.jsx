@@ -62,7 +62,7 @@ const Home = () => {
             </Container>
             </Navbar>
 
-            <div className='tmepi'>
+            <div className='sm'>
                 <h1 className='lop'>Soil Moisture</h1>
                 <div className='sm1'>
                     <h1 className='fd'>Field 1</h1>

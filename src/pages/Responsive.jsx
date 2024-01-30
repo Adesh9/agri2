@@ -1,10 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
-import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { firebaseAuth, useFirebase } from '../context/Firebase';
-import { signOut } from 'firebase/auth';
+
 
 
 import Nav from 'react-bootstrap/Nav';
@@ -13,18 +10,10 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Carousel from 'react-bootstrap/Carousel';
 import './css/Responsive.css';
 //import img from './headphone.jpeg';
-import Farm1 from './Farm1.jpg';
-import Farm2 from './Farm2.jpg';
-import Farm3 from './Farm4.jpg';
-import Col from 'react-bootstrap/Col';
-import container from 'react-bootstrap/Container';
-import Image from 'react-bootstrap/Image';
-import Row from 'react-bootstrap/Row';
-//import image from './Money.png';
-import ProgressBar from 'react-bootstrap/ProgressBar';
-//import { BiCommand } from 'react-icons/bi';
-//import Nav1 from './Nav1.jpg';
-import Card from 'react-bootstrap/Card';
+import Farm1 from './img/Farm1.jpg';
+import Farm2 from './img/Farm2.jpg';
+import Farm3 from './img/Farm3.jpg';
+
 
 
 
@@ -164,61 +153,6 @@ function Response() {
       </div>
       </div>
       <br></br> */}
-
-      <div className='sm'>
-
-        <h1 className='lop'>Soil Moisture</h1>
-      
-        <div className='sm1'>
-        <h1 className='fd'>Field 1</h1>
-        <Button className='btt'  variant="success">Sprinkle Status</Button>
-        </div>
-        
-        <div className='sm2'>
-        <h1 className='fd'>Field 2</h1>
-        <Button className='btt'  variant="success" >Sprinkle Status</Button>
-        </div>
-      </div>
-      <div className='cc'>
-
-      </div>
-
-      <div className='tmepi'>
-      <h1 className='lop'>Temperature</h1>
-      <div className='tm1'>
-        <h1 className='td'>Temperature sensor</h1>
-        <Button className='ttt'  variant="success">Temperature Status</Button>
-        </div>
-
-        <div className='cc'>
-
-      </div>
-      
-      
-
-      <div className='smms'>
-
-<h1 className='loop'>Other Reading's</h1>
-
-<div className='sm1'>
-<h1 className='fd'>Smoke Sensor</h1>
-<Button className='btt'  variant="success">Smoke  Status</Button>
-</div>
-
-<div className='sm2'>
-<h1 className='fd'>Motor </h1>
-<Button className='btt'  variant="success" >Motor Status</Button>
-</div>
-</div>
-
-
-
-      </div>
-
-        
-   
-      
-    
       </>
     );
   }

@@ -5,11 +5,13 @@ import { useFirebase } from './context/Firebase';
 //pages
 import NewLogin from './pages/NewLogin';
 import Login from './pages/Login';
-import Home from './pages/Responsive';
+import Home from './pages/Home';
+import Response from './pages/Responsive';
 
 //css
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
+
 
 
 function App() {

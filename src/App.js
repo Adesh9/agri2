@@ -6,7 +6,6 @@ import { useFirebase } from './context/Firebase';
 import NewLogin from './pages/NewLogin';
 import Login from './pages/Login';
 import Home from './pages/Home';
-import Response from './pages/Responsive';
 
 //css
 import './App.css';

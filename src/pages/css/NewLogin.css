@@ -4,6 +4,14 @@
     padding-top: 0;
 }
 
+.page{
+    background-color: var(--body_background);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: var(--body_color);
+}
+
 .logi {
     
     display: flex;
@@ -28,3 +36,4 @@
 h3 {
     text-shadow: 0px 4px 8px rgb(43, 42, 42);
 }
+

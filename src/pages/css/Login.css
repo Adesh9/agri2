@@ -3,6 +3,14 @@
     padding: 0;
 }
 
+.page{
+    background-color: var(--body_background);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: var(--body_color);
+}
+
 .log {
     display: flex;
     justify-content: center;
@@ -24,3 +32,8 @@
 .ca {
     text-decoration: none;
 }
+
+
+
+
+

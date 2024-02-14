@@ -1,7 +1,7 @@
 import { createContext, useContext, useState, useEffect } from "react";
 import { initializeApp } from "firebase/app";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "firebase/auth";
-import {getDatabase, set, ref} from "firebase/database";
+import {getDatabase, set, ref, onValue} from "firebase/database";
 import { getFirestore } from "firebase/firestore";
 
 
@@ -43,6 +43,8 @@ export const FirebaseProvider = (props) =>{
     };
     
     const putData = (key, data) => set(ref(database, key), data);
+
+    
 
     const signInWithEmailAndPass = (email, password) => signInWithEmailAndPassword(firebaseAuth, email, password)
 

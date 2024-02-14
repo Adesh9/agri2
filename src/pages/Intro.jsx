@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useFirebase } from '../context/Firebase';
-
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
@@ -13,8 +12,10 @@ import './css/Intro.css';
 //import img from './headphone.jpeg';
 import Farm1 from './img/Farm1.jpg';
 import Farm2 from './img/Farm2.jpg';
-import Farm3 from './img/Farm4.jpg';
+import Farm3 from './img/Farm3.jpg';
+import DarkMode from './DarkMode';
 //import { BiCommand } from 'react-icons/bi';
+
 
 
 function Intro() {
@@ -40,9 +41,10 @@ function Intro() {
     };
 
     return (
-        <>
+        <div className='page'>
         <div className='nav1'>
 
+      
       <Navbar expand="lg" className="bg-body-primary">
         <Container className ="c1" fluid>
           <Navbar.Brand href="#" style ={{color:"white"}}> </Navbar.Brand>
@@ -53,47 +55,22 @@ function Intro() {
               style={{ maxHeight: '100px' }}
               navbarScroll
             >
-            
-              <Nav.Link style ={{color:"white"}} href="#action1">Home</Nav.Link>
-              <Nav.Link style ={{color:"white"}} href="/Interface">Visualization</Nav.Link>
-              <NavDropdown style ={{color:"white"}} title="Monitor" id="navbarScrollingDropdown">
-              
-                <NavDropdown.Item  style ={{color:"purple",fontSize:"20px"}} href="#action3">Temperature</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item  style ={{color:"purple",fontSize:"20px"}} href="#action4">
-                  Soil Moisture
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item style ={{color:"purple",fontSize:"20px"}} href="#action5">
-                  Water Supply
-                </NavDropdown.Item>
-                
-              </NavDropdown>
-
-            
-
             <diV className="t1"></diV>
             
 
 
               <Nav.Link style ={{color:"white"}} href="/Login">Login</Nav.Link>
              
+              <DarkMode/>
             
               
             </Nav>
-            <Form className="d-flex">
-              <Form.Control
-                type="search"
-                placeholder="Search"
-                className="me-2"
-                aria-label="Search"
-              />
-              <Button style={{color:"white"}} variant="outline-success">Search</Button>
-            </Form>
+           
             
           </Navbar.Collapse>
         </Container>
       </Navbar>
+      
       </div>
 
       <div className='slide'>
@@ -170,7 +147,7 @@ function Intro() {
       <br></br> */}
 
 
-      </>
+      </div>
     );
   }
   export default Intro;

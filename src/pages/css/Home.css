@@ -1,8 +1,18 @@
-* {
+
+
+*{
     margin: 0;
     padding: 0;
+    
 }
 
+.page{
+    background-color: var(--body_background);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: var(--body_color);
+}
 
 .coolfont {
     color: #fff  ;
@@ -25,7 +35,7 @@
     height: 350px;
     width: 30%;
     margin-left: 10%;
-    margin-top: 3%;
+    margin-top: 1%;
     margin-bottom: 2%;
     border-radius: 5%;
     box-shadow: 0 4px 8px green;
@@ -47,14 +57,13 @@
 
 .lop {
     display: flex;
-    margin-left: 40%;
+    margin-left: 0%;
     color: green;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin-top: 1%;
 }
 .temp {
-    display: flex;
-    margin-left: 40%;
+    margin-left:42%;
     color: green;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin-top: 500px;
@@ -107,5 +116,6 @@
 }
 
 .smms {
-    margin-top: 90px;
+    margin-top: 50px;
 }
+

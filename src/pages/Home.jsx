@@ -15,6 +15,10 @@ import background from './img/background.png'
 
 //css
 import './css/Home.css';
+import DarkMode from './DarkMode';
+
+
+
 
 //
 const Home = () => {
@@ -38,7 +42,7 @@ const Home = () => {
     };
 
     return(
-        <>
+        <div className='page'>
             <Navbar expand="lg" bg="dark" data-bs-theme="dark">
             <Container >
                 <Navbar.Brand ><Nav.Link  href="./Home">Crop Management Monitor</Nav.Link></Navbar.Brand>
@@ -47,9 +51,11 @@ const Home = () => {
                 <Nav >
                     
                     <Nav.Link href="./Display">Display</Nav.Link>
+                    <DarkMode/>
                 </Nav>
                 </Navbar.Collapse>
                     <Navbar.Collapse className="justify-content-end">
+                       
                     <NavDropdown className='coolfont' title="Hii User" >
                     <NavDropdown.Item  href="#action/3.1">Settings</NavDropdown.Item>
                     <NavDropdown.Divider />
@@ -63,9 +69,9 @@ const Home = () => {
             </Container>
             </Navbar>
             <div  >
-            <div className='sm'>
-                <h1 className='lop'>Soil Moisture</h1>
-                <div className='sm1'>
+                <div className='sm'>
+                    <h1 className='lop'>Soil Moisture</h1>
+                    <div className='sm1'>
                     <h1 className='fd'>Field 1</h1>
                     <Button className='btt'  variant="success">Moisture History</Button>
                 </div>
@@ -75,7 +81,7 @@ const Home = () => {
                 </div>
             </div>
             
-            <div className='tmepi'>
+            <div className='sm'>
                 <h1 className='temp'>Other Reading's</h1>
             </div>    
             <div className='sm1'>
@@ -84,23 +90,22 @@ const Home = () => {
             </div>
 
 
-            <div className='smms'>
+            
 
-                <div className='sm2'>
-                    <h1 className='fd'>Smoke Sensor</h1>
-                    <Button className='btt'  variant="success">Smoke History</Button>
-                </div>
+            <div className='sm2'>
+                <h1 className='fd'>Smoke Sensor</h1>
+                <Button className='btt'  variant="success">Smoke History</Button>
+            </div>
 
-                <div className='sm2'>
-                    <h1 className='fd'>Motor </h1>
+            <div className='sm2'>
+                <h1 className='fd'>Motor </h1>
                     
-                </div>
             </div>
-            </div>
+        </div>
 
 
             
-        </>
+        </div>
     )
 }
 

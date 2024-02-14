@@ -4,7 +4,10 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import './css/Login.css';
 import { useFirebase } from '../context/Firebase';
-
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import DarkMode from './DarkMode';
 
 
 const Login = () =>{
@@ -28,7 +31,14 @@ const Login = () =>{
   };
 
     return(
-        <>
+        <div className='page'>
+        <Navbar expand="lg" bg="dark" data-bs-theme="dark">
+            <Container >
+                <Navbar.Brand ><Nav.Link  href="./">Crop Management Monitor</Nav.Link></Navbar.Brand>
+                <Navbar.Toggle />
+                <DarkMode/>
+            </Container>
+          </Navbar>
         <div className="log">
         <Form onSubmit={handleSubmit}>
             <h3>LogIn</h3>
@@ -62,7 +72,7 @@ const Login = () =>{
       </Button>
     </Form>
         </div>
-        </>
+        </div>
     )
 }
 export default Login;

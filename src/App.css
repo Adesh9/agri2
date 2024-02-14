@@ -1,0 +1,12 @@
+.App-header{
+    background-color: var(--body_background);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: var(--body_color);
+
+}
+
+.app-link{
+    color: var(--link_color);
+}

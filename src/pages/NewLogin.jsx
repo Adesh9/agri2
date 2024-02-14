@@ -4,6 +4,11 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import './css/NewLogin.css';
 import { useFirebase } from '../context/Firebase';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import DarkMode from './DarkMode';
+import Container from 'react-bootstrap/Container';
+
 
 const NewLogin = () =>{
   const firebase = useFirebase();
@@ -29,7 +34,15 @@ const NewLogin = () =>{
   };
 
   return(
-        <div >
+    
+        <div className='page' >
+          <Navbar expand="lg" bg="dark" data-bs-theme="dark">
+            <Container >
+                <Navbar.Brand ><Nav.Link  href="./">Crop Management Monitor</Nav.Link></Navbar.Brand>
+                <Navbar.Toggle />
+                <DarkMode/>
+            </Container>
+          </Navbar>
         <div className='logi'>
         <Form onSubmit={handleSubmit}>
           
@@ -73,7 +86,7 @@ const NewLogin = () =>{
       
       <Form.Group className="mb-3" controlId="formBasicCheckbox">
         {/* <Form.Check type="checkbox" label="Stay Sign up" /> */}
-        <a className='ca' href="/">Log In</a>
+        <a className='ca' href="/Login">Log In</a>
       </Form.Group>
 
       <Button variant="primary" type="submit">
